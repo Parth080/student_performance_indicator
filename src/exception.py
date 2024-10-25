@@ -16,9 +16,3 @@ class CustomException(Exception):
 
     def __str__(self):
         return self.error_message
-
-try:
-    x = 1 / 0  
-except Exception as e:
-    custom_error = CustomException(e, sys)
-    logging.error(custom_error)  
